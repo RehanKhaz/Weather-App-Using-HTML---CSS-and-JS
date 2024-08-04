@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.825);
+}
+
+.Container {
+  min-height: 10vh;
+  width: 20em;
+  padding: 0.9rem;
+  border-radius: 1.5rem;
+  background-color: white;
+  padding-block: 1rem;
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa, #b3e5fc, #ffe082);
+}
+
+.Container .Location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 3rem;
+}
+
+.Location input {
+  height: 2rem;
+  width: 80%;
+  outline: none;
+  border: none;
+  color: black;
+  text-indent: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+
+.Location input::placeholder {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.Location i {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.835);
+}
+
+.Location button {
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.Location button:hover {
+  background-color: black;
+  color: white;
+}
+
+.Weather-Body {
+  display: none;
+}
+.Weather-Data .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Weather-Data img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.ErrorImg {
+  height: 14rem;
+  width: 14rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.ErrorPara{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color:red;
+  margin-top: 1rem;;
+}
+
+.Weather-Data .cityName {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+  color: grey;
+}
+
+.Weather-Data .status {
+  width: 100%;
+  text-align: center;
+}
+
+.Weather-Data .temperature {
+  font-size: 2.3rem;
+  margin-top: 1rem;
+  display: flex;
+  font-weight: light;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.Weather-Data .temperature sup {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-top: -0.8rem;
+}
+
+.Weather-Data .about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+
+.Weather-Data .Description {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.Weather-Data .Description i {
+  color: black;
+
+  font-size: 2rem;
+}
+
+/* Making APP Responsive */
+@media all and ( width <= 350px) {
+  .Container{
+    width: 90vw;
+  }
+  .Container .Location input{
+    width:clamp(50vw, 60vw, 70vw);
+    font-size:1.1rem
+  }
+  .Container .Location input::placeholder{
+    font-size:clamp(.7rem, .9rem, 1rem);
+  }
+  .Container .Location i  {
+    font-size: 1.3rem;
+  }
+  .Container .Location button{
+    font-size: 1rem;
+  }
+  .Weather-Data .Description i{
+    font-size: 1.5rem;
+  }
+   .Weather-Data .Description{
+    font-size: 1rem;
+   }
+   .Weather-Data img, .ErrorImg{
+    height: 8rem;
+    width: 8rem;
+   }
+   .Weather-Data .cityName {
+    font-size: 2.7rem;
+   }
+   .Weather-Data .temperature {
+    font-size: 1.8rem;
+   }
+   .Weather-Data .temperature sup{
+    font-size: 1.1rem ;
+   }
+}
